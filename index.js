@@ -1,4 +1,8 @@
+require('datejs'); // Add at top of file
 
+function combineUsers(...args) {
+    // Function shell ready!
+}
 
 
 module.exports = {
