@@ -12,6 +12,8 @@ function combineUsers(...args) {
     
     // Add today's date in M/d/yyyy format
     combinedObject.merge_date = new Date().toString('M/d/yyyy');
+    
+    return combinedObject;
 }
 
 module.exports = {
