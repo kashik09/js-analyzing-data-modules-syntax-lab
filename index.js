@@ -1,9 +1,11 @@
-require('datejs'); // Add at top of file
+require('datejs');
 
 function combineUsers(...args) {
-    // Function shell ready!
+    // Initialize the return object
+    const combinedObject = {
+        users: []
+    };
 }
-
 
 module.exports = {
   ...(typeof combineUsers !== 'undefined' && { combineUsers })
