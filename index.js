@@ -5,9 +5,9 @@ function combineUsers(...args) {
         users: []
     };
     
-    // Loop through each array in args
+    // Loop through each array and merge using spread
     for (let i = 0; i < args.length; i++) {
-        // We'll merge in the next level!
+        combinedObject.users = [...combinedObject.users, ...args[i]];
     }
 }
 
