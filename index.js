@@ -1,19 +1,14 @@
 require('datejs');
 
 function combineUsers(...args) {
-    const combinedObject = {
-        users: []
+    // Merge all arrays into a single users array
+    const users = args.flat();
+    
+    // Return object with users array and today's date
+    return {
+        users: users,
+        merge_date: Date.today().toString('M/d/yyyy')
     };
-    
-    // Loop through each array and merge using spread
-    for (let i = 0; i < args.length; i++) {
-        combinedObject.users = [...combinedObject.users, ...args[i]];
-    }
-    
-    // Add today's date in M/d/yyyy format
-    combinedObject.merge_date = new Date().toString('M/d/yyyy');
-    
-    return combinedObject;
 }
 
 module.exports = {
